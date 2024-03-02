@@ -53,6 +53,7 @@ export default class FilesManagerService extends Service {
     let finishedIndex = new Set<number>()
     const bar = new SingleBar({}, Presets.shades_classic)
     bar.start(total, 0)
+    log.addLine(`=========== BATCH UPLOAD ===========`)
 
     queue.addAll(
       filePaths.map((path, i) => async () => {
