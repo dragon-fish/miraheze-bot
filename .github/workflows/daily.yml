@@ -18,7 +18,7 @@ jobs:
           node-version: 20
       - run: npm i -g pnpm
       - run: pnpm install
-      - run: pnpm start
+      - run: pnpm task:daily
         env:
           MW_API_ENDPOINT: ${{ secrets.MW_API_ENDPOINT }}
           MW_BOT_USERNAME: ${{ secrets.MW_BOT_USERNAME }}

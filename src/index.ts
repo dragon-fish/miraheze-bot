@@ -1,7 +1,6 @@
 import 'dotenv/config'
 import { Context } from 'cordis'
-import { MediaWikiService } from './services/MediaWikiService'
-import KeepAlive from './tasks/keep-alive'
+import { MediaWikiService } from '@/services/MediaWikiService'
 
 const app = new Context()
 app.start()
@@ -13,5 +12,4 @@ app.plugin(MediaWikiService, {
   password: process.env.MW_BOT_PASSWORD!,
 })
 
-// Run tasks
-app.plugin(KeepAlive)
+export default app

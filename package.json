@@ -6,12 +6,15 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "tsx src/index.ts"
+    "task:daily": "tsx src/tasks/daily.ts",
+    "task:batch-upload": "tsx src/tasks/batch-upload.ts",
+    "task:batch-download": "tsx src/tasks/batch-download.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/cli-progress": "^3.11.5",
     "@types/node": "^20.11.24",
     "dotenv": "^16.4.5",
     "tslib": "^2.6.2",
@@ -19,7 +22,11 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
+    "@web-std/file": "^3.0.3",
+    "cli-progress": "^3.12.0",
     "cordis": "^3.12.0",
+    "file-type": "^19.0.0",
+    "p-queue": "^8.0.1",
     "wiki-saikou": "^3.3.1"
   }
 }

@@ -11,16 +11,11 @@ export default class KeepAlive {
   async start() {
     const mw = this.ctx.mw
 
-    const time = new Date().toISOString()
+    const title = `User:${mw.userInfo.name}/keep-alive`
+    const text = new Date().toISOString()
     const summary = `[TASK] scheduled wiki keep-alive`
-    const page = `User:${mw.userInfo.name}/keep-alive`
 
-    const { data } = await mw.api.postWithToken('csrf', {
-      action: 'edit',
-      title: page,
-      text: time,
-      summary,
-    })
+    const data = await mw.api.edit(title, text, summary)
 
     this.ctx.logger.info(`[KeepAlive] successful:`, data)
     return data
