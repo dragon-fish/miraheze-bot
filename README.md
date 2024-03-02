@@ -1,6 +1,12 @@
-# Miraheze Bot
+<div align="center">
+
+<img src="https://r2.epb.wiki/avatar/SILI.jpeg" width="200">
+
+# SILI Bot on NGNL Miraheze wiki
 
 https://ngnlzh.miraheze.org/wiki/User:SILI_bot
+
+</div>
 
 ## Automatic Tasks
 
